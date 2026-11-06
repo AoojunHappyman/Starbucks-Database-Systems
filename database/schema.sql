@@ -1,0 +1,616 @@
+-- Source: docs/project-report.pdf, pages 27-30.
+-- Verbatim extracted Data Dictionary; the PDF contains no executable SQL.
+-- PDF page 27
+--  
+-- 27
+--  
+--  
+--  
+-- 9. Data Dictionary แสดงโครงสร้างและกําหนดคุณสมบัติให้แก่ทุก Attributes ของแต่ละตาราง 
+-- Table Name 
+-- Attribute Name 
+-- Contents 
+-- Type 
+-- Format 
+-- Nullable 
+-- Key 
+-- FK 
+-- Referenced 
+-- Table 
+-- ORDER 
+-- ordID 
+-- รหัสของออเดอร์ 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- ordStatus 
+-- สถานะออเดอร์ 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- ordDate 
+-- วันของออเดอร์ 
+-- date 
+-- yyyy-
+-- mm-dd 
+-- N 
+--  
+--  
+-- ordTime 
+-- เวลาของออเดอร์ 
+-- time 
+-- hh-mm-
+-- ss 
+-- N 
+--  
+--  
+-- total 
+-- จ านวนเงินทั้งหมด 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- empID 
+-- รหัสพนักงาน 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- EMPLOYEE 
+-- cusID 
+-- รหัสลูกค้า 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- CUSTOMER 
+-- branchID 
+-- รหัสของสาขา 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- BRANCH 
+-- ORDER LINE 
+-- ordLineID 
+-- รหัสรายการสั่งซื้อ 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- quantity 
+-- จ านวนสินค้าที่สั่ง 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- unitPrice 
+-- ราคาต่อหน่วยของสินค้า 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- subTotalPrice 
+-- ราคารวมของรายการสั่งซื้อ 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- productID 
+-- รหัสสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- PRODUCT 
+-- ord_ID 
+-- รหัสของออเดอร์ 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- ORDER 
+-- EMPLOYEE 
+-- empID 
+-- รหัสของพนักงาน 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- fname 
+-- ชื่อจริงของพนักงาน 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- lname 
+-- นามสกุลของพนักงาน 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- startDate 
+-- วันที่เริ่มงานของพนักงาน 
+-- date 
+-- yyyy-
+-- mm-dd 
+-- N 
+--  
+--  
+-- PDF page 28
+--  
+-- 28
+--  
+--  
+--  
+-- phone 
+-- เบอร์โทรศัพท์ของพนักงาน 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- email 
+-- อีเมลของพนักงาน 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- status 
+-- สถานะของพนักงาน 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- position 
+-- ต าแหน่งของพนักงาน 
+-- varchar(20) 
+-- xxx 
+-- N 
+--  
+--  
+-- BRANCH 
+-- branchID 
+-- รหัสของสาขา 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- branchName 
+-- ชื่อของสาขา 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- managerName 
+-- ชื่่อของผู้จัดการสาขา 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- phone 
+-- เบอร์โทรศัพท์ของสาขา 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- officeHours 
+-- เวลาท าการของสาขา 
+-- varchar(20) 
+-- xxx 
+-- N 
+--  
+--  
+-- location 
+-- ที่ตั้งของสาขา 
+-- varchar(100) 
+-- xxx 
+-- N 
+--  
+--  
+-- PRODUCT 
+-- productID 
+-- รหัสของสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- pdName 
+-- ชื่อสินค้า 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- price 
+-- ราคาสินค้า 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- description 
+-- รายละเอียดสินค้า 
+-- varchar(255) 
+-- xxx 
+-- N 
+--  
+--  
+-- salestatus 
+-- สถานะการขายสินค้า 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- BEVERAGE 
+-- productID 
+-- รหัสสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- PRODUCT 
+-- topping 
+-- ท็อปปิ้งของเครื่องดื่ม 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- formula 
+-- สูตรของเครื่องดื่ม 
+-- varchar(255) 
+-- xxx 
+-- N 
+--  
+--  
+-- size 
+-- ขนาดของเครื่องดื่ม 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- caffeine_mg 
+-- ปริมาณคาเฟอีน 
+-- (มิลลิกรัม) 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- BAKERY 
+-- productID 
+-- รหัสสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- PRODUCT 
+-- PDF page 29
+--  
+-- 29
+--  
+--  
+--  
+-- calories 
+-- ปริมาณแคลอรี่ 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- allergen_info 
+-- ข้อมูลสารก่อภูมิแพ้ 
+-- varchar(255) 
+-- xxx 
+-- N 
+--  
+--  
+-- fat_g 
+-- ปริมาณไขมัน (กรัม) 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- MEMBER 
+-- memberID 
+-- รหัสสมาชิก 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- DoB  
+-- วันเกิดของสมาชิก 
+-- date 
+-- yyyy-
+-- mm-dd 
+-- N 
+--  
+--  
+-- point 
+-- คะแนนสะสมของสมาชิก 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- discount 
+-- ส่วนลดของสมาชิก 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- email 
+-- อีเมลของสมาชิก 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- memberLevel 
+-- ระดับสมาชิก 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- registerDate 
+-- วันที่สมัครสมาชิก 
+-- date 
+-- yyyy-
+-- mm-dd 
+-- N 
+--  
+--  
+-- cusID 
+-- รหัสลูกค้า 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- CUSTOMER 
+-- CUSTOMER 
+-- cusID 
+-- รหัสลูกค้า 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- Name 
+-- ชื่อลูกค้า 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- STARBUCK CARD 
+-- cardID 
+-- รหัสบัตร Starbucks 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- totalMoneyleft 
+-- จ านวนเงินคงเหลือในบัตร 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- memberID 
+-- รหัสสมาชิก 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- MEMBER 
+-- cusID 
+-- รหัสลูกค้า 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- CUSTOMER 
+-- PAYMENT 
+-- paymentID 
+-- รหัสการช าระเงิน 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- total 
+-- จ านวนเงินที่ช าระทั้งหมด 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- status 
+-- สถานะการช าระเงิน 
+-- varchar(10) 
+-- xxx 
+-- N 
+--  
+--  
+-- PDF page 30
+--  
+-- 30
+--  
+--  
+--  
+-- date 
+-- วันที่ช าระเงิน 
+-- date 
+-- yyyy-
+-- mm-dd 
+-- N 
+--  
+--  
+-- method 
+-- วิธีการช าระเงิน 
+-- varchar(20) 
+-- xxx 
+-- N 
+--  
+--  
+-- ord_ID 
+-- รหัสของออเดอร์ 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- ORDER 
+-- RECEIPT 
+-- check_number 
+-- เลขที่ใบเสร็จ 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- branch_address 
+-- ที่อยู่ของสาขา 
+-- varchar(100) 
+-- xxx 
+-- N 
+--  
+--  
+-- total_amount 
+-- จ านวนเงินรวมทั้งหมด 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- total_discount 
+-- ส่วนลดรวมทั้งหมด 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- sub_total 
+-- ยอดรวมก่อนหักส่วนลด 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- paymentID 
+-- รหัสการช าระเงิน 
+-- int 
+-- xxx 
+-- N 
+-- FK 
+-- PAYMENT 
+-- STOCK ITEM 
+-- stockID 
+-- รหัสวัตถุดิบ/สต็อกสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- PK 
+--  
+-- stockName 
+-- ชื่อวัตถุดิบ 
+-- varchar(50) 
+-- xxx 
+-- N 
+--  
+--  
+-- amount 
+-- จ านวนคงเหลือของวัตถุดิบ 
+-- int 
+-- xxx 
+-- N 
+--  
+--  
+-- MEMBER_PHONE 
+-- memberID 
+-- รหัสสมาชิก 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- MEMBER 
+-- memberPhone 
+-- เบอร์โทรศัพท์ของสมาชิก 
+-- varchar(10) 
+-- xxx 
+-- N 
+-- PK,FK 
+-- MEMBER 
+-- Use in 
+-- productID 
+-- รหัสสินค้า 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- PRODUCT 
+-- stockID 
+-- รหัสวัตถุดิบ 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- STOCK ITEM 
+-- Stored 
+-- stockID 
+-- รหัสวัตถุดิบ 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- STOCK ITEM 
+-- branchID 
+-- รหัสสาขาที่จัดเก็บวัตถุดิบ 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- BRANCH 
+-- Pay 
+-- cardID 
+-- รหัสบัตร Starbucks 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- STARBUCK 
+-- CARD 
+-- paymentID 
+-- รหัสการช าระเงิน 
+-- int 
+-- xxx 
+-- N 
+-- PK,FK 
+-- PAYMENT 
+--  
