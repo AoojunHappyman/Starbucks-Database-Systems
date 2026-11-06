@@ -62,6 +62,9 @@ starbucks-database-system/
 ├── database/
 │   ├── schema.sql
 │   └── sample-data.sql
+├── sql/
+│   ├── README.md
+│   └── schema.sql
 └── assets/
     └── preview.png
 ```
@@ -74,9 +77,10 @@ starbucks-database-system/
 | [relational-schema.png](diagrams/relational-schema.png) | ภาพ Relational Schema จากรายงานหน้า 25 |
 | [schema.sql](database/schema.sql) | ข้อความ Data Dictionary ที่ดึงจากรายงานหน้า 27–30 เก็บเป็นคอมเมนต์ SQL |
 | [sample-data.sql](database/sample-data.sql) | คอมเมนต์ระบุว่าในรายงานไม่มีข้อมูลตัวอย่างหรือคำสั่ง INSERT |
+| [สคริปต์ MySQL](sql/schema.sql) | คำสั่งสร้างตารางจาก Data Dictionary พร้อม [วิธีใช้งานและข้อจำกัด](sql/README.md) |
 | [preview.png](assets/preview.png) | สำเนาภาพ ER/EER Diagram สำหรับแสดงตัวอย่าง |
 
-รายงานไม่มีคำสั่ง SQL สำหรับสร้างตารางหรือข้อมูลตัวอย่าง จึงไม่ได้เพิ่มคำสั่งหรือข้อมูลขึ้นใหม่ ไฟล์ในโฟลเดอร์ `database/` เป็นคอมเมนต์เท่านั้น และยังไม่ใช่สคริปต์สำหรับสร้างหรือเติมข้อมูลลงฐานข้อมูล
+รายงานไม่มีคำสั่ง SQL สำหรับสร้างตารางหรือข้อมูลตัวอย่าง ไฟล์ในโฟลเดอร์ `database/` ยังคงเป็นคอมเมนต์อ้างอิงจากรายงาน ส่วน [sql/schema.sql](sql/schema.sql) เป็นสคริปต์ MySQL ที่เขียนขึ้นจาก Data Dictionary โดยไม่เพิ่มข้อมูลตัวอย่าง ดูวิธีรันและจุดที่ข้อมูลต้นฉบับไม่สอดคล้องกันได้ที่ [คู่มือสคริปต์ MySQL](sql/README.md)
 
 ## ตัวอย่างแผนภาพ
 
